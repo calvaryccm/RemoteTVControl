@@ -13,14 +13,9 @@ namespace CCM.TVRemote.Core
         public int[] TvsToSkip { get; set; }
 
         private static IPAddress[] _DefaultIPAddresses = new IPAddress[]{
-            System.Net.IPAddress.Parse("10.10.252.10"), 
-            System.Net.IPAddress.Parse("10.10.252.11"),
-            System.Net.IPAddress.Parse("10.10.252.12"),
-            System.Net.IPAddress.Parse("10.10.252.13"),
-            System.Net.IPAddress.Parse("10.10.252.14"),
-            System.Net.IPAddress.Parse("10.10.252.15"),
-            System.Net.IPAddress.Parse("10.10.252.16"),
-            System.Net.IPAddress.Parse("10.10.252.17")
+            System.Net.IPAddress.Parse("10.10.10.10"),
+            System.Net.IPAddress.Parse("10.10.10.11"),
+            System.Net.IPAddress.Parse("10.10.10.12")
         };
 
         /// <summary>
