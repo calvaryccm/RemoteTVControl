@@ -1,10 +1,8 @@
 ﻿@using (@Html.BeginForm("SendCommand", "Home", FormMethod.Post))
 {
-
-        <button type="button" class="btn btn-success btn-lg btn-block" value="on">Turn On</button><br />
-        <button type="button" class="btn btn-danger btn-lg btn-block" value="off">Turn Off</button><br />
-        <button type="button" class="btn btn-primary btn-lg btn-block" value="serviceon"><span class="glyphicon glyphicon-facetime-video"></span> Service Mode</button><br />
-        <button type="button" class="btn btn-primary btn-lg btn-block" value="serviceoff"><span class="glyphicon glyphicon-picture"></span> DSM Mode</button>
-
+        <button type="submit" name="command" class="btn btn-success btn-lg btn-block" value="on">Turn On</button><br />
+        <button type="submit" name="command" class="btn btn-danger btn-lg btn-block" value="off">Turn Off</button><br />
+        <button type="submit" name="command" class="btn btn-primary btn-lg btn-block" value="serviceon"><span class="glyphicon glyphicon-facetime-video"></span> Service Mode</button><br />
+        <button type="submit" name="command" class="btn btn-primary btn-lg btn-block" value="serviceoff"><span class="glyphicon glyphicon-picture"></span> DSM Mode</button>
 }
     

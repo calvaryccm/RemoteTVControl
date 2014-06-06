@@ -12,11 +12,6 @@ namespace CCM.TVRemote.Core
     public static class TVRemoteControl
     {
         public static int DefaultPort { get; set; }
-        /// <summary>
-        /// The indexes of IP addresses to skip in the TV address list.
-        /// You can change the default value below.
-        /// </summary>
-        public static int[] TvsToSkip { get; set; }
 
         static TVRemoteControl()
         {
@@ -25,12 +20,20 @@ namespace CCM.TVRemote.Core
 
         public static void SendCommand(this List<IPAddress> addresses, string data, int[] tvsToSkip = null)
         {
+            
+            List<int> tvstoskip;
+                
+                if(tvsToSkip != null)
+                    tvstoskip = new List<int>(tvsToSkip);
+                else
+                    tvstoskip = null;
 
             for (var i = 0; i < addresses.Count; i++)
             {
-                if (tvsToSkip != null)
+                if (tvstoskip != null)
                 {
-                    if (tvsToSkip[i] == i)
+
+                    if (tvstoskip.Contains(i))
                         continue;
                 }
               
